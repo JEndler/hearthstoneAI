@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>370</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>LogWatcher
+--
+-gamestate : Gamestate
+--
++def __init__()
++def watch()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>540</y>
+      <w>100</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>HSCard
+--
++name
++stats[]
++cost
++text
++ID
++CardID
+--
++def __init__()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>570</y>
+      <w>220</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>HearthSimulation
+--
+-gamestate : Gamestate
+--
++def listoflegalmoves(gamestate)
++def simTurn(gamestate,move)
++def simGame(gamestate)
++def playSpell()
++def playMinion()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>100</y>
+      <w>220</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Gamestate
+--
++Gamemode
++TurnNumber
++Deck[[],[],[]]
++Hand[[],[],[]]
++Board[[],[],[]]
++Enchantments[[],[],[]]
++Health[]
++Armor[]
++Graveyard[[],[],[]]
++CardsPlayed[[],[],[]]
+--
++def __init__()
++def deepcopy()
++def predict()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>350</y>
+      <w>160</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>MCTreeNode
+--
++parent
++children[]
++val
++NumGames
++gamestate
++move
+--
++def hasChild()
++def addChild()
++def hasParent()
++def update()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>200</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>MCTree
+--
++def calcUCB1()
++def selectChild()
++def findMove()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>600</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Move
+--
++actioncard
++targetcard
++type
+--
++def __init__()
++def execute()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>250</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>cards
+--
++def getJsonFromFile()
++def searchCardByID()
++def searchname()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>430</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Bot
+--
++def run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>200</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Action
+--
++def bezier()
++def humanmove()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1150</x>
+      <y>40</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Netdecks
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
