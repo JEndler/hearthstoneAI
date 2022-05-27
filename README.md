@@ -1,4 +1,6 @@
 # hearthstoneAI
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 A Python based Hearthstone Bot.
 
 **This Repository serves as an Archive for this Project, there is no active Development anymore.**
